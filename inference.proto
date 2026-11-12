@@ -149,10 +149,8 @@ message GenerateResponse {
 }
 
 message PrefillProgress {
-  string request_id = 1;
   // Tokens still to compute for this request's prefill.
-  uint32 remaining_compute_tokens = 7;
-  reserved 2 to 6, 8 to 11;
+  uint32 remaining_prefill_tokens = 1;
 }
 
 message SequenceOutput {
